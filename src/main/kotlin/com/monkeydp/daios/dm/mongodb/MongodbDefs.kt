@@ -9,7 +9,7 @@ import com.monkeydp.daios.dm.mongodb.MongodbVersion.MONGODB_4_0
  * @date 2019/10/27
  */
 object MongodbDefs : AbstractDsDefs() {
-    val mongodb40dsDef = dsDef {
+    val mongodb40def = dsDef {
         version = MONGODB_4_0
     }
 }

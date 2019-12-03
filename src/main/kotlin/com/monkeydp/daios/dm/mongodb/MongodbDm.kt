@@ -21,7 +21,7 @@ class MongodbDm(config: DmOpenConfig) : AbstractDm(config) {
             private set
     }
     
-    override val dsDefs = MongodbDefs.toList()
+    override val dsDefs = MongodbDefs.toSet()
     override val testdata = object : DmTestdata {
         override val cps = MongodbCpMocker.cps
     }
