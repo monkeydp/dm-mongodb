@@ -19,5 +19,5 @@ object MongodbCpMocker {
     )
     
     val cp = mongodb40cp
-    val cps = listOf(mongodb40cp)
+    val cps = setOf(mongodb40cp)
 }
