@@ -10,8 +10,7 @@ import kotlin.properties.Delegates
  */
 internal var kodein: Kodein by Delegates.notNullSingleton()
 
-internal fun initKodein(vararg modules: Kodein.Module) {
-    kodein = Kodein {
-        importAll(*modules)
-    }
-}
+internal fun initKodein(vararg modules: Kodein.Module) =
+        Kodein {
+            importAll(*modules)
+        }
