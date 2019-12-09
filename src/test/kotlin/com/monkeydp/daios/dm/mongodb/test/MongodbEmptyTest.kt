@@ -6,7 +6,7 @@ import org.junit.Test
  * @author iPotato
  * @date 2019/10/30
  */
-class MongodbEmptyTest : AbstractTest() {
+internal class MongodbEmptyTest : AbstractTest() {
     @Test
     fun test() {
     

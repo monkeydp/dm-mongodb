@@ -12,6 +12,6 @@ internal var kodein: Kodein by Delegates.notNullSingleton()
 
 internal fun initKodein(vararg modules: Kodein.Module) {
     kodein = Kodein {
-        modules.forEach { import(it) }
+        importAll(*modules)
     }
 }
