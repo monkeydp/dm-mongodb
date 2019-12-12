@@ -2,7 +2,7 @@ package com.monkeydp.daios.dm.mongodb.conn
 
 import com.monkeydp.daios.dm.base.conn.AbstractNewConnForm
 import com.monkeydp.daios.dm.base.instruction.NewConn
-import com.monkeydp.daios.dms.sdk.main.SdkForm
+import com.monkeydp.daios.dms.sdk.annot.SdkForm
 
 /**
  * @author iPotato
