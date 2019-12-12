@@ -4,7 +4,7 @@ import com.monkeydp.daios.dm.mongodb.MongodbDefs.mongodb40def
 import com.monkeydp.daios.dm.mongodb.conn.MongodbNewConnFrom
 import com.monkeydp.daios.dms.sdk.conn.ConnProfile
 import com.monkeydp.daios.dms.sdk.datasource.Datasource.MONGODB
-import com.monkeydp.tools.ext.convertTo
+import com.monkeydp.tools.ext.kotlin.convertTo
 
 /**
  * @author iPotato
