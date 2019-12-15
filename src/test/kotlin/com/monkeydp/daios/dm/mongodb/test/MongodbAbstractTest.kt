@@ -1,7 +1,6 @@
 package com.monkeydp.daios.dm.mongodb.test
 
 import com.monkeydp.daios.dm.mongodb.MongodbApp
-import com.monkeydp.daios.dms.sdk.dm.DmConfig
 import com.monkeydp.tools.config.enableDebugMode
 
 /**
@@ -13,7 +12,7 @@ internal abstract class MongodbAbstractTest {
     companion object {
         init {
             enableDebugMode()
-            MongodbApp(DmConfig.mock())
+            MongodbApp
         }
     }
 }
