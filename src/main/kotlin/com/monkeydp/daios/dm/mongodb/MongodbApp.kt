@@ -5,7 +5,7 @@ import com.monkeydp.daios.dm.mongodb.config.MongodbComponentConfig
 import com.monkeydp.daios.dm.mongodb.config.kodein
 import com.monkeydp.daios.dms.sdk.annot.SdkDmApp
 import com.monkeydp.daios.dms.sdk.datasource.Datasource.MONGODB
-import com.monkeydp.daios.dms.sdk.share.kodein.dmsKodeinModule
+import com.monkeydp.daios.dms.sdk.share.kodein.kodeinModules
 import com.monkeydp.tools.ext.kodein.KodeinHelper
 import org.kodein.di.Kodein
 
@@ -16,7 +16,7 @@ import org.kodein.di.Kodein
 @SdkDmApp(MONGODB)
 object MongodbApp : AbstractDmApp() {
     override fun initDmKodein(): Kodein {
-        kodein.baseKodein = KodeinHelper.initKodein(MongodbComponentConfig, dmsKodeinModule)
+        kodein.baseKodein = KodeinHelper.initKodein(MongodbComponentConfig, *kodeinModules)
         return kodein
     }
 }
