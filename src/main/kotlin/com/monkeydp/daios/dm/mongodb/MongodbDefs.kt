@@ -2,7 +2,7 @@ package com.monkeydp.daios.dm.mongodb
 
 import com.monkeydp.daios.dm.base.datasource.dsDef
 import com.monkeydp.daios.dm.mongodb.MongodbVersion.MONGODB_4_0
-import com.monkeydp.daios.dms.sdk.annot.SdkDsDef
+import com.monkeydp.daios.dms.sdk.datasource.SdkDsDef
 
 /**
  * @author iPotato

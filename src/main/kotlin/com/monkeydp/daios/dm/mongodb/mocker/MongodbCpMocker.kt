@@ -2,8 +2,8 @@ package com.monkeydp.daios.dm.mongodb.mocker
 
 import com.monkeydp.daios.dm.mongodb.MongodbDefs.mongodb40def
 import com.monkeydp.daios.dm.mongodb.conn.MongodbNewConnFrom
-import com.monkeydp.daios.dms.sdk.annot.SdkTestCp
 import com.monkeydp.daios.dms.sdk.conn.ConnProfile
+import com.monkeydp.daios.dms.sdk.conn.SdkTestCp
 import com.monkeydp.daios.dms.sdk.datasource.Datasource.MONGODB
 import com.monkeydp.tools.ext.kotlin.convertTo
 
