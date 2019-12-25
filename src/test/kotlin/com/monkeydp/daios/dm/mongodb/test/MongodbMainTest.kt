@@ -1,6 +1,7 @@
 package com.monkeydp.daios.dm.mongodb.test
 
-import org.junit.Test
+import org.junit.jupiter.api.Test
+
 
 /**
  * @author iPotato
