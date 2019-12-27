@@ -35,6 +35,6 @@ internal abstract class MongodbAbstractApiTest : MongodbAbstractTest() {
     @AfterAll
     @IgnoreException(PropertyUninitializedException::class)
     fun afterAll() {
-//        connContext.conn.close()
+        connContext.conn.close()
     }
 }
