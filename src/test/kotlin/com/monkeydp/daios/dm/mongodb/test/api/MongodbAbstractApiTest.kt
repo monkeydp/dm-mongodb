@@ -10,6 +10,7 @@ import com.monkeydp.daios.dms.sdk.share.request.RequestContextHolder
 import com.monkeydp.tools.ext.kotlin.PropertyUninitializedException
 import org.junit.jupiter.api.AfterAll
 import org.junit.jupiter.api.BeforeAll
+import org.junit.jupiter.api.TestInstance
 import org.kodein.di.Kodein
 import org.kodein.di.generic.instance
 
@@ -17,6 +18,7 @@ import org.kodein.di.generic.instance
  * @author iPotato
  * @date 2019/12/14
  */
+@TestInstance(TestInstance.Lifecycle.PER_CLASS)
 internal abstract class MongodbAbstractApiTest : MongodbAbstractTest() {
     
     private val connApi: ConnApi by kodein.instance()

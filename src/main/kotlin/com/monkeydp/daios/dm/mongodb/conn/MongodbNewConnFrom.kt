@@ -1,11 +1,13 @@
 package com.monkeydp.daios.dm.mongodb.conn
 
 import com.monkeydp.daios.dm.base.conn.AbstractNewConnForm
+import com.monkeydp.daios.dms.sdk.received.form.annot.SdkNewConnForm
 
 /**
  * @author iPotato
  * @date 2019/10/20
  */
+@SdkNewConnForm
 class MongodbNewConnFrom(
         connName: String = "Mongodb Conn",
         host: String = "127.0.0.1",
