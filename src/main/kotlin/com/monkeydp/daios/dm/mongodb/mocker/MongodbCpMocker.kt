@@ -1,6 +1,6 @@
 package com.monkeydp.daios.dm.mongodb.mocker
 
-import com.monkeydp.daios.dm.mongodb.MongodbDefs.mongodb40def
+import com.monkeydp.daios.dm.mongodb.MongodbDefRepo.mongodb40def
 import com.monkeydp.daios.dm.mongodb.conn.MongodbNewConnFrom
 import com.monkeydp.daios.dms.sdk.conn.ConnProfile
 import com.monkeydp.daios.dms.sdk.conn.SdkTestCp
