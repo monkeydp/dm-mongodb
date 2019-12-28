@@ -3,7 +3,9 @@ package com.monkeydp.daios.dm.mongodb.api
 import com.mongodb.MongoClient
 import com.monkeydp.daios.dm.base.api.AbstractNodeApi
 import com.monkeydp.daios.dm.base.metadata.node.def.UnhandledNodeDefException
+import com.monkeydp.daios.dm.base.metadata.node.def.sub.CollNd
 import com.monkeydp.daios.dm.base.metadata.node.def.sub.DbNd
+import com.monkeydp.daios.dm.base.metadata.node.def.sub.GroupNd
 import com.monkeydp.daios.dm.mongodb.config.kodein
 import com.monkeydp.daios.dm.mongodb.metadata.node.MongodbNodePath
 import com.monkeydp.daios.dms.sdk.api.annot.SdkNodeApi
@@ -29,10 +31,15 @@ object MongodbNodeApi : AbstractNodeApi() {
             (connContext.conn.rawConn as MongoClient).let {
                 when (def) {
                     is DbNd -> loadDbNodes(it, def)
+                    is CollNd -> loadCollNodes(it, def, path.dbName)
+                    is GroupNd -> listOf(ndStruct.find(def.id).create())
                     else -> throw UnhandledNodeDefException(def)
                 }
             }
     
     private fun loadDbNodes(client: MongoClient, def: DbNd): List<Node> =
             client.listDatabaseNames().map { def.create(it) }.toList()
+    
+    private fun loadCollNodes(client: MongoClient, def: CollNd, dbName: String): List<Node> =
+            client.getDatabase(dbName).listCollectionNames().map { def.create(it) }.toList()
 }
