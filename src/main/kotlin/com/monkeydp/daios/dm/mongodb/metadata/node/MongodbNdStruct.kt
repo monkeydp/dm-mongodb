@@ -1,9 +1,9 @@
 package com.monkeydp.daios.dm.mongodb.metadata.node
 
 import com.monkeydp.daios.dm.base.metadata.node.def.*
+import com.monkeydp.daios.dm.mongodb.metadata.icon.MongodbIcon.MONGODB_CONN_ICON
 import com.monkeydp.daios.dms.sdk.metadata.node.AbstractNdStruct
 import com.monkeydp.daios.dms.sdk.metadata.node.SdkNdStruct
-import com.monkeydp.daios.dm.mongodb.metadata.icon.MongodbIcon.MONGODB_CONN_ICON
 
 /**
  * @author iPotato

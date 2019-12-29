@@ -5,7 +5,6 @@ import com.monkeydp.daios.dm.mongodb.mocker.MongodbNodeMocker.collsNodePath
 import com.monkeydp.daios.dm.mongodb.mocker.MongodbNodeMocker.connNodePath
 import com.monkeydp.daios.dm.mongodb.mocker.MongodbNodeMocker.dbNodePath
 import com.monkeydp.daios.dms.sdk.api.NodeApi
-import com.monkeydp.daios.dms.sdk.instruction.target.GlobalTarget
 import com.monkeydp.daios.dms.sdk.instruction.target.GlobalTarget.*
 import org.junit.jupiter.api.Assertions
 import org.junit.jupiter.api.Assertions.assertTrue
