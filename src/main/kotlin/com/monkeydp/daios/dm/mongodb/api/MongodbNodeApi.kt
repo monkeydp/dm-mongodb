@@ -5,7 +5,6 @@ import com.monkeydp.daios.dm.base.api.AbstractNodeApi
 import com.monkeydp.daios.dm.base.metadata.node.def.UnhandledNodeDefException
 import com.monkeydp.daios.dm.base.metadata.node.def.CollNd
 import com.monkeydp.daios.dm.base.metadata.node.def.DbNd
-import com.monkeydp.daios.dm.base.metadata.node.def.GroupNd
 import com.monkeydp.daios.dm.mongodb.config.kodein
 import com.monkeydp.daios.dm.mongodb.metadata.node.MongodbNodePath
 import com.monkeydp.daios.dms.sdk.api.annot.SdkNodeApi
@@ -24,15 +23,14 @@ object MongodbNodeApi : AbstractNodeApi() {
     
     private val connContext: ConnContext by kodein.instance()
     
-    override fun loadNodes(path: NodePath, def: NodeDef): List<Node> =
-            loadNodes(path.toSub(), def)
+    override fun loadNonGroupNodes(path: NodePath, def: NodeDef): List<Node> =
+            loadNonGroupNodes(path.toSub(), def)
     
-    private fun loadNodes(path: MongodbNodePath, def: NodeDef): List<Node> =
+    private fun loadNonGroupNodes(path: MongodbNodePath, def: NodeDef): List<Node> =
             (connContext.conn.rawConn as MongoClient).let {
                 when (def) {
                     is DbNd -> loadDbNodes(it, def)
                     is CollNd -> loadCollNodes(it, def, path.dbName)
-                    is GroupNd -> listOf(ndStruct.find(def.id).create())
                     else -> throw UnhandledNodeDefException(def)
                 }
             }
