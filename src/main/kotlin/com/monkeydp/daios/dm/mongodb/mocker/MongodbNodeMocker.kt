@@ -1,9 +1,8 @@
 package com.monkeydp.daios.dm.mongodb.mocker
 
-import com.monkeydp.daios.dm.base.metadata.node.def.sub.CollsNd
-import com.monkeydp.daios.dm.base.metadata.node.def.sub.ConnNd
-import com.monkeydp.daios.dm.base.metadata.node.def.sub.DbNd
-import com.monkeydp.daios.dm.base.metadata.node.def.sub.TablesNd
+import com.monkeydp.daios.dm.base.metadata.node.def.CollsNd
+import com.monkeydp.daios.dm.base.metadata.node.def.ConnNd
+import com.monkeydp.daios.dm.base.metadata.node.def.DbNd
 import com.monkeydp.daios.dm.mongodb.config.kodein
 import com.monkeydp.daios.dm.mongodb.mocker.MongodbCpMocker.cp
 import com.monkeydp.daios.dm.mongodb.mocker.MongodbElementMocker.DB_NAME
