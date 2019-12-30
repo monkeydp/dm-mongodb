@@ -1,7 +1,7 @@
-package com.monkeydp.daios.dm.mongodb.metadata.menu
+package com.monkeydp.daios.dm.mongodb.ui.menu
 
-import com.monkeydp.daios.dms.sdk.metadata.menu.AbstractMdStruct
-import com.monkeydp.daios.dms.sdk.metadata.menu.SdkMdStruct
+import com.monkeydp.daios.dms.sdk.ui.menu.AbstractMdStruct
+import com.monkeydp.daios.dms.sdk.ui.menu.SdkMdStruct
 import com.monkeydp.tools.ext.kotlin.toPropValuesX
 
 /**

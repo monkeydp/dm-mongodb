@@ -1,6 +1,6 @@
-package com.monkeydp.daios.dm.mongodb.metadata.icon
+package com.monkeydp.daios.dm.mongodb.ui.icon
 
-import com.monkeydp.daios.dms.sdk.metadata.icon.Icon
+import com.monkeydp.daios.dms.sdk.ui.icon.Icon
 
 /**
  * @author iPotato

@@ -1,6 +1,6 @@
-package com.monkeydp.daios.dm.mongodb.metadata.node
+package com.monkeydp.daios.dm.mongodb.ui.node
 
-import com.monkeydp.daios.dms.sdk.metadata.node.NodePath
+import com.monkeydp.daios.dms.sdk.ui.node.NodePath
 
 
 /**

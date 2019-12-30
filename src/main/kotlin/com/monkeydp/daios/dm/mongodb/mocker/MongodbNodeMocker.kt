@@ -1,14 +1,14 @@
 package com.monkeydp.daios.dm.mongodb.mocker
 
-import com.monkeydp.daios.dm.base.metadata.node.def.CollsNd
-import com.monkeydp.daios.dm.base.metadata.node.def.ConnNd
-import com.monkeydp.daios.dm.base.metadata.node.def.DbNd
+import com.monkeydp.daios.dm.base.ui.node.def.CollsNd
+import com.monkeydp.daios.dm.base.ui.node.def.ConnNd
+import com.monkeydp.daios.dm.base.ui.node.def.DbNd
 import com.monkeydp.daios.dm.mongodb.config.kodein
 import com.monkeydp.daios.dm.mongodb.mocker.MongodbCpMocker.cp
 import com.monkeydp.daios.dm.mongodb.mocker.MongodbElementMocker.DB_NAME
-import com.monkeydp.daios.dms.sdk.metadata.node.NodeDefStruct
-import com.monkeydp.daios.dms.sdk.metadata.node.NodePath
-import com.monkeydp.daios.dms.sdk.metadata.node.find
+import com.monkeydp.daios.dms.sdk.ui.node.NodeDefStruct
+import com.monkeydp.daios.dms.sdk.ui.node.NodePath
+import com.monkeydp.daios.dms.sdk.ui.node.find
 import org.kodein.di.generic.instance
 
 /**

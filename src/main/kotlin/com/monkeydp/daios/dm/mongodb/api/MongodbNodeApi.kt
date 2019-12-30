@@ -2,15 +2,15 @@ package com.monkeydp.daios.dm.mongodb.api
 
 import com.mongodb.MongoClient
 import com.monkeydp.daios.dm.base.api.AbstractNodeApi
-import com.monkeydp.daios.dm.base.metadata.node.def.CollNd
-import com.monkeydp.daios.dm.base.metadata.node.def.DbNd
-import com.monkeydp.daios.dm.base.metadata.node.def.UnhandledNodeDefException
+import com.monkeydp.daios.dm.base.ui.node.def.CollNd
+import com.monkeydp.daios.dm.base.ui.node.def.DbNd
+import com.monkeydp.daios.dm.base.ui.node.def.UnhandledNodeDefException
 import com.monkeydp.daios.dm.mongodb.config.kodein
-import com.monkeydp.daios.dm.mongodb.metadata.node.MongodbNodePath
+import com.monkeydp.daios.dm.mongodb.ui.node.MongodbNodePath
 import com.monkeydp.daios.dms.sdk.api.annot.SdkNodeApi
-import com.monkeydp.daios.dms.sdk.metadata.node.Node
-import com.monkeydp.daios.dms.sdk.metadata.node.NodeDef
-import com.monkeydp.daios.dms.sdk.metadata.node.NodePath
+import com.monkeydp.daios.dms.sdk.ui.node.Node
+import com.monkeydp.daios.dms.sdk.ui.node.NodeDef
+import com.monkeydp.daios.dms.sdk.ui.node.NodePath
 import com.monkeydp.daios.dms.sdk.share.conn.ConnContext
 import org.kodein.di.generic.instance
 
