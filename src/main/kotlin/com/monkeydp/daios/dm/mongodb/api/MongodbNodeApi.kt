@@ -8,11 +8,11 @@ import com.monkeydp.daios.dm.base.ui.node.def.UnhandledNodeDefException
 import com.monkeydp.daios.dm.mongodb.config.kodein
 import com.monkeydp.daios.dm.mongodb.ui.node.MongodbNodePath
 import com.monkeydp.daios.dms.sdk.api.annot.SdkNodeApi
+import com.monkeydp.daios.dms.sdk.context.ConnContext
 import com.monkeydp.daios.dms.sdk.ui.node.Node
 import com.monkeydp.daios.dms.sdk.ui.node.NodeDef
 import com.monkeydp.daios.dms.sdk.ui.node.NodePath
-import com.monkeydp.daios.dms.sdk.share.conn.ConnContext
-import org.kodein.di.generic.instance
+import com.monkeydp.tools.ext.kodein.findImpl
 
 /**
  * @author iPotato
@@ -21,7 +21,7 @@ import org.kodein.di.generic.instance
 @SdkNodeApi
 object MongodbNodeApi : AbstractNodeApi() {
     
-    private val connContext: ConnContext by kodein.instance()
+    private val connContext: ConnContext get() = kodein.findImpl()
     
     override fun loadNonGroupNodes(path: NodePath, def: NodeDef): List<Node> =
             loadNonGroupNodes(path.toSub(), def)
