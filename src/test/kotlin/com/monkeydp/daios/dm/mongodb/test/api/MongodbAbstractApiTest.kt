@@ -30,9 +30,10 @@ internal abstract class MongodbAbstractApiTest : MongodbAbstractTest() {
     @IgnoreException(Kodein.NotFoundException::class)
     fun beforeEach() {
         ContextRepoHolder.setContextRepo(
-                ConnContext(cp) {
-                    conn = connApi.getConn(cp)
-                }
+                ConnContext(
+                        cp,
+                        conn = connApi.getConn(cp)
+                )
         )
     }
     

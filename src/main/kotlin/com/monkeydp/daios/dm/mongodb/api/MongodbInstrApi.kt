@@ -8,5 +8,4 @@ import com.monkeydp.daios.dms.sdk.api.annot.SdkInstrApi
  * @date 2019/11/5
  */
 @SdkInstrApi
-object MongodbInstrApi : AbstractInstrApi() {
-}
+object MongodbInstrApi : AbstractInstrApi()
