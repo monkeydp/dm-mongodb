@@ -23,31 +23,34 @@ internal class MongodbNodeApiTest : MongodbAbstractApiTest() {
     
     @Test
     fun loadDbNodesTest() {
-        ContextRepoHolder.updateContextRepo {
-            nodeContext = NodeContext(connNodePath)
+        ContextRepoHolder.contextRepo
+                .copy(nodeContext = NodeContext(connNodePath))
+                .apply(ContextRepoHolder::setContextRepo)
+        api.loadSubNodes().apply {
+            assertTrue(isNotEmpty())
+            forEach { Assertions.assertEquals(DB, it.target) }
         }
-        val nodes = api.loadSubNodes()
-        assertTrue(nodes.isNotEmpty())
-        nodes.forEach { Assertions.assertEquals(DB, it.target) }
     }
     
     @Test
     fun loadCollNodesTest() {
-        ContextRepoHolder.updateContextRepo {
-            nodeContext = NodeContext(collsNodePath)
+        ContextRepoHolder.contextRepo
+                .copy(nodeContext = NodeContext(collsNodePath))
+                .apply(ContextRepoHolder::setContextRepo)
+        api.loadSubNodes().apply {
+            assertTrue(isNotEmpty())
+            forEach { Assertions.assertEquals(COLL, it.target) }
         }
-        val nodes = api.loadSubNodes()
-        assertTrue(nodes.isNotEmpty())
-        nodes.forEach { Assertions.assertEquals(COLL, it.target) }
     }
     
     @Test
     fun loadGroupNodesTest() {
-        ContextRepoHolder.updateContextRepo {
-            nodeContext = NodeContext(dbNodePath)
+        ContextRepoHolder.contextRepo
+                .copy(nodeContext = NodeContext(dbNodePath))
+                .apply(ContextRepoHolder::setContextRepo)
+        api.loadSubNodes().apply {
+            assertTrue(isNotEmpty())
+            forEach { Assertions.assertEquals(GROUP, it.target) }
         }
-        val nodes = api.loadSubNodes()
-        assertTrue(nodes.isNotEmpty())
-        nodes.forEach { Assertions.assertEquals(GROUP, it.target) }
     }
 }
